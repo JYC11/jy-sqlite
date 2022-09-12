@@ -19,3 +19,13 @@ REPL = Read Evaluate Print Loop
 This is the method in which the db continuosly receives commands
 
 Understanding pointers are hard.
+
+# New built in functions
+
+getline()
+full explanation link: https://man7.org/linux/man-pages/man3/getline.3.html
+automatically allocates memory for line read from input stream and takes the input
+
+strcmp()
+full explanation link: https://man7.org/linux/man-pages/man3/strcmp.3.html
+short for string comparison
