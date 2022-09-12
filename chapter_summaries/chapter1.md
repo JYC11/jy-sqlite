@@ -17,3 +17,5 @@ dbs have the following structure:
 
 REPL = Read Evaluate Print Loop
 This is the method in which the db continuosly receives commands
+
+Understanding pointers are hard.
