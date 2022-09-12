@@ -1,6 +1,10 @@
 # chapter 2
 
-Making a simple statement parser
+Making a simple statement parser and "VM" to execute the statements
+
+Separating the compiler and VM is to prevent the VM from worrying about incorrect inputs.
+
+Code for this section is not too difficult to understand.
 
 # New built in functions
 

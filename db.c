@@ -101,7 +101,7 @@ PrepareResult prepare_statement(InputBuffer *input_buffer, Statement *statement)
     return PREPARE_UNRECOGNIZED_STATEMENT;
 }
 
-// Executing SQL
+// Executing SQL (The "VM")
 void execute_statement(Statement *statement)
 {
     switch (statement->type)
