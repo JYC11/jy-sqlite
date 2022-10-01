@@ -115,8 +115,7 @@ void *get_page(Pager *pager, uint32_t page_num)
 {
     if (page_num > TABLE_MAX_PAGES)
     {
-        printf("Tried to fetch page number out of bounds. %d > %d\n", page_num,
-               TABLE_MAX_PAGES);
+        printf("Tried to fetch page number out of bounds. %d > %d\n", page_num, TABLE_MAX_PAGES);
         exit(EXIT_FAILURE);
     }
 
@@ -160,12 +159,11 @@ void *row_slot(Table *table, uint32_t row_num)
 
 Pager *pager_open(const char *filename)
 {
-    int fd = open(filename,
-                  O_RDWR |     // Read/Write mode
-                      O_CREAT, // Create file if it does not exist
-                  S_IWUSR |    // User write permission
-                      S_IRUSR  // User read permission
-    );
+    int fd = open(filename, O_RDWR | O_CREAT, S_IWUSR | S_IRUSR);
+    // O_RDWR  Read/Write mode
+    // O_CREAT Create file if it does not exist
+    // S_IWUSR User write permission
+    // S_IRUSR User read permission
 
     if (fd == -1)
     {
@@ -446,8 +444,7 @@ int main(int argc, char *argv[])
             printf("Syntax error. Could not parse statement.\n");
             continue;
         case (PREPARE_UNRECOGNIZED_STATEMENT):
-            printf("Unrecognized keyword at start of '%s'.\n",
-                   input_buffer->buffer);
+            printf("Unrecognized keyword at start of '%s'.\n", input_buffer->buffer);
             continue;
         }
 
